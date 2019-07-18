@@ -1,7 +1,7 @@
 {
-  "name": "@microsoft.azure/autorest.ruby",
+  "name": "@haipa/autorest.ruby",
   "version": "3.1.0",
-  "description": "The Ruby extension for classic generators in AutoRest.",
+  "description": "The Ruby extension for classic generators in AutoRest (modified for Haipa).",
   "scripts": {
     "autorest": "autorest",
     "start": "dotnet src/bin/netcoreapp2.0/autorest.ruby.dll --server",
@@ -15,9 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Azure/autorest.ruby"
+    "url": "https://github.com/Haipa/autorest.ruby"
   },
-  "readme": "https://github.com/Azure/autorest.ruby/readme.md",
+  "readme": "https://github.com/Haipa/autorest.ruby/readme.md",
   "keywords": [
     "autorest",
     "classic-generators",
@@ -26,9 +26,9 @@
   "author": "Microsoft Corporation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Azure/autorest/issues"
+    "url": "https://github.com/Haipa/autorest/issues"
   },
-  "homepage": "https://github.com/Azure/autorest.ruby/blob/master/README.md",
+  "homepage": "https://github.com/Haipa/autorest.ruby/blob/master/README.md",
   "devDependencies": {
     "@microsoft.azure/autorest.testserver": "^2.5.24",
     "autorest": "^2.0.4203",
