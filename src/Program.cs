@@ -97,9 +97,15 @@ namespace AutoRest.Ruby
             }
 
             // process
-            var plugin = await GetValue<bool?>("azure-arm") == true
-                ? (IAnyPlugin)new AutoRest.Ruby.Azure.PluginRba()
-                : (IAnyPlugin)new AutoRest.Ruby.PluginRb();
+            var azurePlugin = await GetValue<bool?>("azure-arm") == true;
+            var haipaPlugin = await GetValue<bool?>("haipa") == true;
+
+
+            var plugin = haipaPlugin
+                ? (IAnyPlugin)new AutoRest.Ruby.Haipa.PluginRba() 
+                : azurePlugin 
+                    ? (IAnyPlugin)new AutoRest.Ruby.Azure.PluginRba()
+                    : (IAnyPlugin)new AutoRest.Ruby.PluginRb();
             Settings.PopulateSettings(plugin.Settings, Settings.Instance.CustomSettings);
             
             using (plugin.Activate())
